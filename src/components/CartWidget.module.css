@@ -1,0 +1,22 @@
+.cartWidget {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cartIcon {
+  font-size: 1.5rem;
+}
+
+.cartCount {
+  background-color: crimson;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
