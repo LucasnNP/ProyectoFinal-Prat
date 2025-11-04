@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  padding: 0.35rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.controlBtn {
+  border: 1px solid #e0e0e0;
+  background: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.08s ease;
+}
+
+.controlBtn:hover {
+  background-color: #f2f2f2;
+}
+
+.controlBtn:active {
+  transform: translateY(1px);
+}
+
+.qty {
+  min-width: 36px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.1rem 0.4rem;
+}
+
+.add {
+  background-color: #007b55;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.15s ease, transform 0.08s ease;
+}
+.add:hover {
+  background-color: #005d3d;
+}
+
+.add:active {
+  transform: translateY(1px);
+}
+
+/* Estado deshabilitado */
+.add:disabled,
+.controlBtn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Responsive pequeño */
+@media (max-width: 420px) {
+  .controls {
+    gap: 0.35rem;
+  }
+  .controlBtn {
+    padding: 0.25rem 0.45rem;
+  }
+  .qty {
+    min-width: 30px;
+    font-size: 0.95rem;
+  }
+  .add {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.95rem;
+  }
+}

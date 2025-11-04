@@ -1,15 +1,13 @@
 import CartWidget from "./CartWidget";
 import styles from "./navBar.module.css";
+import Logo from "./Logo";
+import NavLinks from "./NavLinks";
 
 const NavBar = () => {
   return (
     <nav className={styles.navbar}>
-      <h1 className={styles.logo}>Mi tienda</h1>
-      <ul className={styles.menu}>
-        <li>Inicio</li>
-        <li>Productos</li>
-        <li>Contacto</li>
-      </ul>
+      <Logo />
+      <NavLinks />
       <CartWidget />
     </nav>
   );
