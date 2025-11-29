@@ -5,4 +5,52 @@
   background-color: #333;
   color: white;
   padding: 1rem;
+  position: relative;
+}
+
+.left {
+  justify-self: start;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: end;
+}
+
+/* Ícono hamburguesa */
+.burger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mostrar hamburguesa solo en mobile */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* LOGO | MENU | CARRITO */
+    align-items: center;
+  }
+
+  .left {
+    justify-self: start;
+  }
+
+  .center {
+    justify-self: center;
+  }
+
+  .right {
+    justify-self: end;
+  }
 }
