@@ -1,11 +1,18 @@
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import styles from "./CartWidget.module.css";
+import { NavLink } from "react-router-dom";
 
 const CartWidget = () => {
+  const { totalQuantity } = useContext(CartContext);
+
   return (
-    <div className={styles.cartWidget}>
+    <NavLink to="/cart" className={styles.cartWidget}>
       <span className={styles.cartIcon}>🛒</span>
-      <span className={styles.cartCount}>0</span>
-    </div>
+      {totalQuantity() > 0 && (
+        <span className={styles.cartCount}>{totalQuantity()}</span>
+      )}
+    </NavLink>
   );
 };
 

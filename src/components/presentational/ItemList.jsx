@@ -7,7 +7,9 @@ function ItemList({ items }) {
       {items.map((item) => (
         <div key={item.id} className={styles.card}>
           <img
-            src={item.image}
+            src={
+              item.image || "https://via.placeholder.com/300?text=Sin+Imagen"
+            }
             alt={item.title}
             className={styles.image}
             loading="lazy"

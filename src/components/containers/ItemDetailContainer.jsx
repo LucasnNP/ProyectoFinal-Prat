@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 import ItemDetail from "../presentational/ItemDetail";
 import styles from "./ItemDetailContainer.module.css";
 
@@ -9,21 +11,15 @@ function ItemDetailContainer() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-
-    // Simulamos un pequeño retardo con Promise y fetch a FakeStoreAPI
     const fetchItem = async () => {
       try {
-        const response = await fetch(
-          `https://fakestoreapi.com/products/${itemId}`
-        );
-        if (!response.ok) throw new Error("Error al obtener el producto");
-        const data = await response.json();
+        setLoading(true);
+        const docRef = doc(db, "items", itemId);
+        const snapshot = await getDoc(docRef);
 
-        await new Promise((resolve) => setTimeout(resolve, 800));
-        setItem(data);
-      } catch (error) {
-        console.error("Error cargando producto:", error);
+        setItem({ id: snapshot.id, ...snapshot.data() });
+      } catch (err) {
+        console.error("Error cargando producto:", err);
       } finally {
         setLoading(false);
       }

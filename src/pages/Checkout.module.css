@@ -1,0 +1,73 @@
+/* Contenedor general del Checkout */
+.container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Título del proceso */
+.container h1 {
+  color: #007b55;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* Mensaje de carga */
+.loading {
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* --- ESTADO DE ORDEN GENERADA --- */
+
+.succes {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.succes h2 {
+  color: #007b55;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.succes p {
+  font-size: 18px;
+}
+
+.succes strong {
+  color: #333;
+  font-size: 20px;
+}
+
+/* --- ESTADO DE CARRITO VACÍO --- */
+
+.empty {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.empty h2 {
+  color: #007b55;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.empty p {
+  font-size: 18px;
+  color: #444;
+}
