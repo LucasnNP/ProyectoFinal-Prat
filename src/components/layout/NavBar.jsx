@@ -18,10 +18,10 @@ const NavBar = () => {
         <button className={styles.burger} onClick={() => setOpen(!open)}>
           ☰
         </button>
-      </div>
 
-      {/* Links, con clase condicional */}
-      <NavLinks isOpen={open} closeMenu={() => setOpen(false)} />
+        {/* NavLinks en desktop*/}
+        <NavLinks isOpen={open} closeMenu={() => setOpen(false)} />
+      </div>
 
       <div className={styles.right}>
         <CartWidget />

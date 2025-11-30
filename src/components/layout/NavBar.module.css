@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: white;
@@ -9,18 +9,20 @@
 }
 
 .left {
-  justify-self: start;
+  flex: 0 0 auto;
 }
 
 .center {
-  justify-self: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .right {
-  justify-self: end;
+  flex: 0 0 auto;
 }
 
-/* Ícono hamburguesa */
+/* Ícono hamburguesa - oculto por defecto */
 .burger {
   display: none;
   font-size: 2rem;
@@ -30,27 +32,29 @@
   cursor: pointer;
 }
 
-/* Mostrar hamburguesa solo en mobile */
+/* --- MOBILE --- */
 @media (max-width: 768px) {
-  .burger {
-    display: block;
-  }
-
   .navbar {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* LOGO | MENU | CARRITO */
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
     align-items: center;
   }
 
   .left {
-    justify-self: start;
+    justify-self: start; /* Logo a la izquierda */
   }
 
   .center {
-    justify-self: center;
+    justify-self: center; /* Burger centrado */
+    flex: 0;
   }
 
   .right {
-    justify-self: end;
+    justify-self: end; /* Carrito a la derecha */
+  }
+
+  /* Mostrar hamburguesa solo en mobile */
+  .burger {
+    display: block;
   }
 }

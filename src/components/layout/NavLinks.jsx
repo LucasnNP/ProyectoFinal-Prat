@@ -1,11 +1,13 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./NavLinks.module.css";
 
 const NavLinks = ({ isOpen, closeMenu }) => {
   const categories = ["ropa", "calzado", "accesorios"];
+  const [openCat, setOpenCat] = useState(false);
 
   return (
-    <ul className={`${styles.menu} ${isOpen ? styles.menuOpen : ""}`}>
+    <ul className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
       <li onClick={closeMenu}>
         <NavLink to="/">Inicio</NavLink>
       </li>
@@ -14,9 +16,15 @@ const NavLinks = ({ isOpen, closeMenu }) => {
         <NavLink to="/products">Todos Nuestros Productos</NavLink>
       </li>
 
-      <li className={styles.dropdown}>
+      {/* Dropdown */}
+      <li className={styles.dropdown} onClick={() => setOpenCat(!openCat)}>
         <span>Categorías ▾</span>
-        <ul className={styles.dropdownMenu}>
+
+        <ul
+          className={`${styles.dropdownMenu} ${
+            openCat ? styles.dropdownOpen : ""
+          }`}
+        >
           {categories.map((cat) => (
             <li key={cat} onClick={closeMenu}>
               <NavLink to={`/category/${cat}`}>
