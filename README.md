@@ -42,8 +42,8 @@ La aplicación permite navegar un catálogo de productos, ver detalles, filtrar 
 Clonar el repositorio:
 
 ```bash
-git clone https://github.com/usuario/mi-ecommerce-react.git
-cd mi-ecommerce-react
+git clone [https://github.com/LucasnNP/ProyectoFinal-Prat.git]
+cd ProyectoFinal-Prat
 ```
 
 Instalar dependencias
