@@ -7,7 +7,7 @@ La aplicación permite navegar un catálogo de productos, ver detalles, filtrar 
 
 ## 🚀 Demo Online
 
-(agregar aquí el link de Vercel luego del deploy)
+https://lucasnnp.github.io/ProyectoFinal-Prat/
 
 ---
 
@@ -42,7 +42,7 @@ La aplicación permite navegar un catálogo de productos, ver detalles, filtrar 
 Clonar el repositorio:
 
 ```bash
-git clone [https://github.com/LucasnNP/ProyectoFinal-Prat.git]
+git clone https://github.com/LucasnNP/ProyectoFinal-Prat.git
 cd ProyectoFinal-Prat
 ```
 
