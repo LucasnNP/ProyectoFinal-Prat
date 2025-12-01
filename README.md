@@ -81,7 +81,7 @@ En la ruta /item/:itemId, se muestra:
 - Contador de unidades
 - Botón Agregar al carrito
 
-### 🔹 Detalle del producto
+### 🔹 Carrito con Context API
 
 El estado global del carrito incluye:
 
